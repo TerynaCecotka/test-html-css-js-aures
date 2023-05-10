@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="header">
+    <h1>Oblíbené weby</h1>
+  </div>
+
+  <div class="wrapper">
+    <nav class="navigation">
+      <button id="list" class="btn btn-primary" onclick="zobrazSeznam()">Uložené weby</button>
+      <button id="formular" class="btn" onclick="zobrazFormular()">Přidat web</button>
+    </nav>
+
+    <div id="main-content">
+      <div id="divList">
+        <div class="card">
+          <h3>Google</h3>
+          <p>Internetový vyhledávač</p>
+          <a target="_blank" href="https://www.google.cz/">Zobrazit web</a>
+          <span class="delete-container">
+            <button class="btn">
+              Smazat
+            </button>
+          </span>
+        </div>
+        <div class="card">
+          <h3>Seznam</h3>
+          <p>Internetový vyhledávač</p>
+          <a target="_blank" href="https://www.seznam.cz/">Zobrazit web</a>
+          <span class="delete-container">
+            <button class="btn">Smazat</button>
+          </span>
+        </div>
+        <div class="card">
+          <h3>Youtube</h3>
+          <p>Přehrávač videí</p>
+          <a target="_blank" href="https://www.youtube.com/">Zobrazit web</a>
+          <span class="delete-container">
+            <button class="btn">
+              Smazat
+            </button>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div id="divForm" class="hide">
+      <div class="card">
+        <div class="form-row">
+          <p class="title">Název</p>
+          <input type="text" class="text" />
+        </div>
+        <div class="form-row">
+          <p class="title">Popis</p>
+          <textarea class="text description" rows"5"></textarea>
+        </div>
+        <div class="form-row">
+          <p class="title">Odkaz</p>
+          <input type="text" class="text" />
+        </div>
+        <button class="btn btn-primary" onclick="zobrazModal()">Přidat web</button>
+        <!-- Tlačítko 'Přidat web' zobrazí automaticky modal -->
+      </div>
+    </div>
+  </div>
+
+  <div class="backdrop hide" id="backdrop"></div>
+  <div class="modal hide" id="modal">
+    <div class="header-modal">
+      <h3>Invalid Input</h3>
+    </div>
+    <div class="content">
+      <p>Bohužel alespoň jedna vstupní hodnota je neplatná.</p>
+      <p>
+        Zkontrolujte prosím všechny vstupy a ujistěte se, že jste do
+        každého vstupního pole zadali alespoň několik znaků.
+      </p>
+    </div>
+    <div class="button-modal">
+      <Button class="btn btn-primary" onClick="schovejModal()">
+        Potvrdit
+      </Button>
+    </div>
+  </div>
+
+  <script src="app.js">
+
+  </script>
+</body>
+
+</html>

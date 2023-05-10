@@ -1,0 +1,183 @@
+body {
+	font-family: arial, halvetica, sans-serif;
+  padding: 0;
+	margin: 0;
+}
+
+/* Oblast hlavičky*/
+.header {
+	background-color: purple;
+	color: white;
+	text-align: center;
+	font-weight: bold;
+	padding: 10px;
+}
+
+/* Oblast těla strany*/
+.wrapper {
+	margin-left: 25%;
+	margin-right: 20%;
+	width: 50%;
+}
+
+p {
+	padding: 1em 1em 0em 0;
+}
+
+a {
+	color: orange;
+	text-decoration: none;
+}
+
+/*Oblast navigace*/
+.navigation {
+	box-shadow: grey 2px 2px 6px;
+	border-radius: 10px;
+	margin-top: 20px;
+	padding: 1em 2em 1em 2em;
+}
+
+.btn {
+	color: black;
+	border: none;
+	background-color: white;
+	padding: 1em;
+	min-width: 100px;
+	cursor: pointer;
+}
+
+.btn-primary {
+	color: white;
+	border: solid purple;
+	background-color: purple;
+}
+
+/*Main content - Uložené weby*/
+.card {
+	box-shadow: grey 2px 2px 6px;
+	border-radius: 10px;
+	margin-top: 20px;
+	text-decoration: none;
+	padding: 0.5em 2em 2em;
+}
+
+.delete-container {
+	color: purple;
+	margin-top: -5em;
+}
+
+.card .delete-container {
+	position: relative;
+	float: right;
+}
+
+/*Main content - Přidat web*/
+.text {
+	border: solid rgb(173, 172, 172);
+	border-width: 0.5px;
+	height: 30px;
+	width: 100%;
+}
+
+.description {
+	max-width: 100%;
+	min-width: 100%;
+	min-height: 100px;
+}
+
+.submit-button {
+	color: white;
+	background-color: purple;
+	margin-top: 15px;
+	min-width: 150px;
+}
+
+@media screen and (max-width: 800px) {
+	.wrapper {
+		margin-left: 1em;
+		padding: 0;
+		width: 95%;
+	}
+}
+
+.form-row {
+	margin-bottom: 1rem;
+}
+
+.title {
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.hide {
+	display: none;
+}
+
+
+/* 
+  MODAL A BACKDROP
+*/
+.backdrop {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	z-index: 20;
+	background-color: rgba(0, 0, 0, 0.75);
+}
+
+.modal {
+	padding: 0;
+	position: fixed;
+	top: 20vh;
+	left: 5%;
+	width: 90%;
+	background-color: white;
+
+	border-radius: 14px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+	z-index: 30;
+	animation: slide-down 300ms ease-out forwards;
+}
+
+.header-modal {
+	margin: 0;
+	background-color: purple;
+	color: white;
+	height: 30%;
+	padding: 0.75rem;
+	border-radius: 14px 14px 0 0;
+}
+
+h3 {
+	margin: 0;
+}
+
+.content {
+	padding: 0.75rem;
+}
+
+.button-modal {
+	display: flex;
+	float: right;
+	margin: 0.75rem;
+}
+
+@media (min-width: 768px) {
+	.modal {
+		width: 40rem;
+		left: calc(50% - 20rem);
+	}
+}
+
+@keyframes slide-down {
+	from {
+		opacity: 0;
+		transform: translateY(-3rem);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
